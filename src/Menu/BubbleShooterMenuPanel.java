@@ -7,6 +7,7 @@ import Code.BubbleShooter;
 import HighScore.BubbleShooterScoreFrame;
 import Profile.BubbleShooterProfileFrame;
 import Tutorial.BubbleShooterTutorialFrame;
+import Choice.BubbleShooterChoiceFrame;
 
 
 import javax.swing.*;
@@ -49,8 +50,8 @@ public class BubbleShooterMenuPanel extends JPanel{
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterGameFrame bubbleShooterGameFrame = new BubbleShooterGameFrame(new BubbleShooter());
-                bubbleShooterGameFrame.show();
+                BubbleShooterChoiceFrame bubbleShooterChoiceFrame = new BubbleShooterChoiceFrame();
+                bubbleShooterChoiceFrame.show();
                 frame.dispose();
 
 
