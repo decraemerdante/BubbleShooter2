@@ -52,7 +52,7 @@ public class BubbleShooterMenuPanel extends JPanel{
         setLayout(null);
 
         back = new JLabel();
-        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\DanteDC\\Dropbox\\Howest\\Jaar 3\\Semester 3\\Project\\BubbleShooter\\src\\back.png"));
+        back.setIcon(new javax.swing.ImageIcon("src\\back.png"));
         back.setBounds(0,0,30,25);
         back.addMouseListener(new MouseListener() {
             @Override

@@ -13,7 +13,7 @@ public class BubbleShooterTutorialFrame extends JFrame{
         super();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(new BubbleShooterTutorialPanel(this));
-        setPreferredSize(new Dimension(300, 250));
+        setPreferredSize(new Dimension(1000,500));
         setVisible(true);
         pack();
     }
