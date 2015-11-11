@@ -12,7 +12,7 @@ public class BubbleShooterLoginFrame extends JFrame{
         super();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(new BubbleShooterLoginPanel(this));
-        Dimension dimension = new Dimension(300,150);
+        Dimension dimension = new Dimension(300,200);
         setPreferredSize(dimension);
         setVisible(true);
         pack();

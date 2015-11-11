@@ -11,7 +11,7 @@ public class BubbleShooterMenuFrame extends JFrame{
         super();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(new BubbleShooterMenuPanel(this));
-        setPreferredSize(new Dimension(300,250));
+        setPreferredSize(new Dimension(400,350));
         setVisible(true);
         pack();
 

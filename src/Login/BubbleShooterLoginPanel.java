@@ -4,7 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import Menu.BubbleShooterMenuFrame;
+import Welcome.BubbleShooterWelcomeFrame;
 
 /**
  * Created by DanteDC on 10/11/2015.
@@ -15,6 +19,7 @@ public class BubbleShooterLoginPanel extends JPanel {
     private JLabel passwordLabel;
     private JPasswordField passwordText;
     private JButton loginButton;
+    private JLabel back;
 
 
     public BubbleShooterLoginPanel(JFrame frame)
@@ -25,6 +30,7 @@ public class BubbleShooterLoginPanel extends JPanel {
     }
 
     private void addComponents() {
+       this.add(back);
         this.add(userLabel);
         this.add(userText);
         this.add(passwordLabel);
@@ -37,20 +43,51 @@ public class BubbleShooterLoginPanel extends JPanel {
 
         this.setLayout(null);
 
+        back = new JLabel();
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\DanteDC\\Dropbox\\Howest\\Jaar 3\\Semester 3\\Project\\BubbleShooter\\src\\back.png"));
+        back.setBounds(2, 2, 30, 25);
+        back.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                BubbleShooterWelcomeFrame bubbleShooterWelcomeFrame = new BubbleShooterWelcomeFrame();
+                frame.dispose();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
         userLabel = new JLabel("Login");
-        userLabel.setBounds(10, 10, 80, 25);
+        userLabel.setBounds(10, 50, 80, 25);
 
         userText = new JTextField(20);
-        userText.setBounds(100, 10, 160, 25);
+        userText.setBounds(100, 50, 160, 25);
 
         passwordLabel = new JLabel("Password");
-        passwordLabel.setBounds(10, 40, 80, 25);
+        passwordLabel.setBounds(10, 90, 80, 25);
 
         passwordText = new JPasswordField(20);
-        passwordText.setBounds(100, 40, 160, 25);
+        passwordText.setBounds(100, 90, 160, 25);
 
         loginButton = new JButton("login");
-        loginButton.setBounds(10, 80, 80, 25);
+        loginButton.setBounds(10, 120, 80, 25);
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
