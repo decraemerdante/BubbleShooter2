@@ -31,7 +31,7 @@ public class BubbleShooterLoginPanel extends JPanel {
     }
 
     private void addComponents() {
-       this.add(back);
+        this.add(back);
         this.add(userLabel);
         this.add(userText);
         this.add(passwordLabel);
@@ -94,7 +94,7 @@ public class BubbleShooterLoginPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 if(userText.getText().equals(""))
                 {
-                    JOptionPane.showMessageDialog(null,"Please enter a username/password");
+                    JOptionPane.showMessageDialog(null,"Please enter a username/password!");
                 }
                 else
                 {
