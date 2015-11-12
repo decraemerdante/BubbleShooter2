@@ -34,7 +34,7 @@ public class BubbleShooterTutorialPanel extends JPanel {
     {
         this.setLayout(null);
         title = new JLabel();
-        title.setText("How To Play?");
+        title.setText("How To Play");
         title.setFont(new Font("Serif", Font.BOLD, 40));
         title.setBounds(10, 30, 250,40);
 
