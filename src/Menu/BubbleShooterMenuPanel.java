@@ -2,14 +2,11 @@ package Menu;
 
 
 
-import Code.Profile;
-import GameGui.BubbleShooterGameFrame;
-import Code.BubbleShooter;
 import HighScore.BubbleShooterScoreFrame;
 import Profile.BubbleShooterProfileFrame;
 import Tutorial.BubbleShooterTutorialFrame;
 import Choice.BubbleShooterChoiceFrame;
-import Welcome.BubbleShooterWelcomeFrame;
+import Play.BubbleShooterPlayFrame;
 
 
 import javax.swing.*;
@@ -29,14 +26,14 @@ public class BubbleShooterMenuPanel extends JPanel{
     private JButton profile;
     private JButton tutorial;
     private JLabel back;
-    private Profile currentProfile;
 
 
-    public BubbleShooterMenuPanel(JFrame frame, Profile profile)
+
+    public BubbleShooterMenuPanel(JFrame frame)
     {
         createComponents(frame);
         addComponents();
-        currentProfile = profile;
+
     }
 
     private void addComponents() {
@@ -60,7 +57,7 @@ public class BubbleShooterMenuPanel extends JPanel{
         back.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                BubbleShooterWelcomeFrame bubbleShooterWelcomeFrame = new BubbleShooterWelcomeFrame();
+                BubbleShooterPlayFrame bubbleShooterPlyFrame = new BubbleShooterPlayFrame();
                 frame.dispose();
             }
 
@@ -93,8 +90,7 @@ public class BubbleShooterMenuPanel extends JPanel{
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterChoiceFrame bubbleShooterChoiceFrame = new BubbleShooterChoiceFrame();
-                bubbleShooterChoiceFrame.show();
+                BubbleShooterPlayFrame bubbleShooterPlayFrame = new BubbleShooterPlayFrame();
                 frame.dispose();
 
 
@@ -128,7 +124,7 @@ public class BubbleShooterMenuPanel extends JPanel{
         tutorial.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterTutorialFrame bubbleShooterTutorialFrame = new BubbleShooterTutorialFrame(currentProfile);
+                BubbleShooterTutorialFrame bubbleShooterTutorialFrame = new BubbleShooterTutorialFrame();
                 bubbleShooterTutorialFrame.show();
                 frame.dispose();
             }

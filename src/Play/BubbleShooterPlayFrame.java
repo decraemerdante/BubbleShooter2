@@ -1,4 +1,4 @@
-package Welcome;
+package Play;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,15 +6,15 @@ import java.awt.*;
 /**
  * Created by DanteDC on 10/11/2015.
  */
-public class BubbleShooterWelcomeFrame extends JFrame{
+public class BubbleShooterPlayFrame extends JFrame{
 
-    public BubbleShooterWelcomeFrame()
+    public BubbleShooterPlayFrame()
     {
      super();
      setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
      setVisible(true);
-     setContentPane(new BubbleShooterWelcomePanel(this));
-     Dimension dimension = new Dimension(300,300);
+     setContentPane(new BubbleShooterPlayPanel(this));
+     Dimension dimension = new Dimension(400,300);
      setPreferredSize(dimension);
      pack();
     }

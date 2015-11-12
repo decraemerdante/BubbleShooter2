@@ -1,15 +1,12 @@
 package Login;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import Code.Profile;
 import Menu.BubbleShooterMenuFrame;
-import Welcome.BubbleShooterWelcomeFrame;
 
 /**
  * Created by DanteDC on 10/11/2015.
@@ -50,7 +47,7 @@ public class BubbleShooterLoginPanel extends JPanel {
         back.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                BubbleShooterWelcomeFrame bubbleShooterWelcomeFrame = new BubbleShooterWelcomeFrame();
+                BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame();
                 frame.dispose();
             }
 
@@ -99,7 +96,7 @@ public class BubbleShooterLoginPanel extends JPanel {
                 else
                 {
 
-                    BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame(frame,new Profile(userText.getText()));
+                    BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame(frame);
                     bubbleShooterMenuFrame.show();
                     frame.dispose();
                 }

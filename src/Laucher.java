@@ -1,4 +1,4 @@
-import Welcome.BubbleShooterWelcomeFrame;
+import Menu.BubbleShooterMenuFrame;
 
 /**
  * Created by DanteDC on 10/11/2015.
@@ -11,7 +11,6 @@ public class Laucher {
 
     private void Run()
     {
-        BubbleShooterWelcomeFrame bubbleShooterWelcomeFrame = new BubbleShooterWelcomeFrame();
-        bubbleShooterWelcomeFrame.show();
+        BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame();
     }
 }

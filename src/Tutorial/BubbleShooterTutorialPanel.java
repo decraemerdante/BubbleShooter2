@@ -17,12 +17,12 @@ public class BubbleShooterTutorialPanel extends JPanel {
     private JButton button;
     private JLabel tutorialtext;
     private JLabel title;
-    private Profile profile;
-    public BubbleShooterTutorialPanel(BubbleShooterTutorialFrame bubbleShooterTutorialFrame, Profile currentProfile)
+
+    public BubbleShooterTutorialPanel(BubbleShooterTutorialFrame bubbleShooterTutorialFrame)
     {
         createComponents(bubbleShooterTutorialFrame);
         addComponents();
-        profile = currentProfile;
+
     }
     private void addComponents()
     {
@@ -48,7 +48,7 @@ public class BubbleShooterTutorialPanel extends JPanel {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame(frame,profile);
+                BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame(frame);
                 bubbleShooterMenuFrame.show();
                 frame.dispose();
             }
