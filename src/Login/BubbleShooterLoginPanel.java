@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import Code.Profile;
 import Menu.BubbleShooterMenuFrame;
 import Welcome.BubbleShooterWelcomeFrame;
 
@@ -30,7 +31,7 @@ public class BubbleShooterLoginPanel extends JPanel {
     }
 
     private void addComponents() {
-       this.add(back);
+        this.add(back);
         this.add(userLabel);
         this.add(userText);
         this.add(passwordLabel);
@@ -91,9 +92,18 @@ public class BubbleShooterLoginPanel extends JPanel {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame();
-                bubbleShooterMenuFrame.show();
-                frame.dispose();
+                if(userText.getText().equals(""))
+                {
+                    JOptionPane.showMessageDialog(null,"Please enter a username/password!");
+                }
+                else
+                {
+
+                    BubbleShooterMenuFrame bubbleShooterMenuFrame = new BubbleShooterMenuFrame(frame,new Profile(userText.getText()));
+                    bubbleShooterMenuFrame.show();
+                    frame.dispose();
+                }
+
 
 
             }

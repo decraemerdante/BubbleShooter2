@@ -2,6 +2,7 @@ package Menu;
 
 
 
+import Code.Profile;
 import GameGui.BubbleShooterGameFrame;
 import Code.BubbleShooter;
 import HighScore.BubbleShooterScoreFrame;
@@ -28,12 +29,14 @@ public class BubbleShooterMenuPanel extends JPanel{
     private JButton profile;
     private JButton tutorial;
     private JLabel back;
+    private Profile currentProfile;
 
 
-    public BubbleShooterMenuPanel(JFrame frame)
+    public BubbleShooterMenuPanel(JFrame frame, Profile profile)
     {
         createComponents(frame);
         addComponents();
+        currentProfile = profile;
     }
 
     private void addComponents() {
@@ -125,7 +128,7 @@ public class BubbleShooterMenuPanel extends JPanel{
         tutorial.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BubbleShooterTutorialFrame bubbleShooterTutorialFrame = new BubbleShooterTutorialFrame();
+                BubbleShooterTutorialFrame bubbleShooterTutorialFrame = new BubbleShooterTutorialFrame(currentProfile);
                 bubbleShooterTutorialFrame.show();
                 frame.dispose();
             }
