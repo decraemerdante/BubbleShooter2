@@ -1,9 +1,10 @@
-package Menu;
 
-import Code.Profile;
+        package Menu;
 
-import javax.swing.*;
-import java.awt.*;
+        import Code.Profile;
+
+        import javax.swing.*;
+        import java.awt.*;
 
 /**
  * Created by DanteDC on 10/11/2015.
